@@ -9,13 +9,5 @@ $path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealth
 ```
 
 ```bash
-$path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealthCheck.vbs"
-
-Stop-Process -Name "wscript" -Force -ErrorAction SilentlyContinue
-if (Test-Path $path) {
-    Remove-Item -Path $path -Force
-    Write-Host "Success" -ForegroundColor Green
-} else {
-    Write-Host "Not Found" -ForegroundColor Yellow
-}
+$path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealthCheck.vbs"; Stop-Process -Name "wscript" -Force -ErrorAction SilentlyContinue; if (Test-Path $path) { Remove-Item -Path $path -Force; Write-Host "Success" -ForegroundColor Green } else { Write-Host "Not Found" -ForegroundColor Yellow }
 ```
