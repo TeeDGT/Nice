@@ -9,3 +9,6 @@ https://github.com/veyon/veyon/releases/download/v4.10.2/veyon-4.10.2.0-win64-se
 ```bash
 $path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealthCheck.vbs"; Stop-Process -Name "wscript" -Force -ErrorAction SilentlyContinue; if (Test-Path $path) { Remove-Item -Path $path -Force; Write-Host "Success" -ForegroundColor Green } else { Write-Host "Not Found" -ForegroundColor Yellow }
 ```
+```bash
+netsh advfirewall firewall add rule name="Allow ICMPv4" protocol=icmpv4:8,any dir=in action=allow
+```
