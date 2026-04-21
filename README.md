@@ -6,8 +6,6 @@ $path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealth
 
 https://github.com/veyon/veyon/releases/download/v4.10.2/veyon-4.10.2.0-win64-setup.exe
 
-https://github.com/2a523865-b5f3-4081-863a-97d2f225ed12
-
 ```bash
 $path = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\SystemHealthCheck.vbs"; Stop-Process -Name "wscript" -Force -ErrorAction SilentlyContinue; if (Test-Path $path) { Remove-Item -Path $path -Force; Write-Host "Success" -ForegroundColor Green } else { Write-Host "Not Found" -ForegroundColor Yellow }
 ```
